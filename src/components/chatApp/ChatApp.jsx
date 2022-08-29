@@ -39,7 +39,7 @@ const ChatApp = () => {
 
 	useEffect(() => {
 		if (!loading) {
-			selectUsers().then((res) => {
+			selectUsers(78).then((res) => {
 				const { authedUser, allUsers, status } = res;
 				setCurrentUser(authedUser);
 				setUsers(allUsers);
