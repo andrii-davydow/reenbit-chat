@@ -6,7 +6,7 @@ import './chat.scss';
 
 TimeAgo.addLocale(en);
 
-const Chat = ({ change, data, openChat, messages }) => {
+const Chat = ({ change, data, openChat }) => {
 	const changeCls = change ? 'active-chat' : '';
 	const { fullname, photo, online, created, message } = data;
 

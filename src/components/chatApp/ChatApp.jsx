@@ -121,7 +121,6 @@ const ChatApp = () => {
 						users={searchChats?.length > 0 ? searchChats : users}
 						openChat={openChat}
 						selectedChat={selectedChat}
-						messages={messages}
 					/>
 				</div>
 			</div>

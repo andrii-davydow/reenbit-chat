@@ -1,7 +1,7 @@
 import Chat from '../chat/Chat';
 import './chats.scss';
 
-const Chats = ({ users, openChat, selectedChat, messages }) => {
+const Chats = ({ users, openChat, selectedChat }) => {
 	const chatsRender = users
 		?.sort((a, b) => b.created - a.created)
 		.map(
@@ -11,7 +11,6 @@ const Chats = ({ users, openChat, selectedChat, messages }) => {
 					data={el}
 					openChat={() => openChat(el.id)}
 					change={selectedChat === el.id ? true : false}
-					messages={messages}
 				/>
 			)
 			/* el.message?.length > 0 ? (
