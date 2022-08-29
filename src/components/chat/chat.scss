@@ -1,0 +1,66 @@
+@import '../../varible.scss';
+.user-chat {
+	display: flex;
+	/* align-items: center; */
+	padding: 20px;
+	border-bottom: 1px solid $gray_D;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	/* height: 80px; */
+	&.active-chat {
+		border-color: $blue_L;
+		background: rgba(0, 180, 251, 0.1) !important;
+	}
+	&:hover {
+		background: $gray_L;
+	}
+
+	.user-chat-info {
+		margin-left: 15px;
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.user-name {
+			position: relative;
+			font-size: 18px;
+			margin-bottom: 5px;
+			font-weight: 600;
+			color: $blue_D;
+			.name-clip {
+				display: inline-block;
+				white-space: nowrap;
+				max-width: 180px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+		.user-dateMsg {
+			font-size: 14px;
+			color: $blue_D;
+			opacity: 0.6;
+			display: inline-block;
+			margin-bottom: 10px;
+			margin-left: 10px;
+		}
+		.user-lastMsg {
+			max-width: 80%;
+			font-size: 13px;
+			color: $blue_D;
+		}
+		.user-unreadMsg {
+			display: inline-block;
+			position: relative;
+			top: -14px;
+			right: -5px;
+			width: 17px;
+			height: 17px;
+			border-radius: 17px;
+			font-size: 11px;
+			text-align: center;
+			background: $blue_L;
+			color: $white;
+		}
+	}
+}

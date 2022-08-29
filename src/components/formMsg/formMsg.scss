@@ -1,0 +1,51 @@
+@import '../../varible.scss';
+.message-form {
+	padding: 0 20px;
+	min-height: 100px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	margin-top: auto;
+	background: $gray_L;
+	.msg-input {
+		width: 100%;
+		padding: 17px 20px;
+		border-radius: 50px;
+		font-size: 15px;
+		border: 1px solid $gray_D;
+		color: $blue_D;
+		transition: 0.3s ease-in-out;
+		margin-right: 10px;
+		&:focus,
+		&:active {
+			outline: 0;
+			outline-offset: 0;
+			border-color: $blue_L;
+		}
+	}
+	.msg-btn {
+		min-width: 50px;
+		width: 50px;
+		min-height: 50px;
+		height: 50px;
+
+		border: 0;
+		border-radius: 50px;
+
+		background: $blue_D;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+		svg {
+			width: 27px;
+			position: relative;
+			top: 2px;
+			left: -1px;
+			path {
+				fill: $white;
+			}
+		}
+		&:hover {
+			background: $blue_L;
+		}
+	}
+}

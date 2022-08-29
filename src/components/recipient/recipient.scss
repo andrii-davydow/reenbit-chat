@@ -1,0 +1,16 @@
+@import '../../varible.scss';
+.recipient-block {
+	padding: 0 20px;
+	background: $gray_L;
+	display: flex;
+	align-items: center;
+	min-height: 100px;
+	height: 100px;
+
+	.recipient-name {
+		margin-left: 15px;
+	}
+	.prev-chat {
+		display: none;
+	}
+}

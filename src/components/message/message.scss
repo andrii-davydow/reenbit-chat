@@ -1,0 +1,60 @@
+@import '../../varible.scss';
+.message {
+	width: 75%;
+	display: flex;
+	align-items: flex-end;
+	.msg-text {
+		border-radius: 20px;
+		padding: 15px 20px;
+		color: $white;
+		background: $blue_D;
+		margin-left: 20px;
+		position: relative;
+		z-index: 1;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 4px;
+			left: -10px;
+			border-top: 15px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-right: 25px solid $blue_D;
+			z-index: -1;
+		}
+	}
+	.msg-date {
+		display: block;
+		opacity: 0.5;
+		margin-top: 3px;
+		font-size: 13px;
+	}
+	&.own-msg {
+		flex-direction: row-reverse;
+		margin-left: auto;
+		.msg-date {
+			text-align: right;
+		}
+		.msg-text {
+			margin-left: auto;
+			background: $gray_D;
+			color: $blue_D;
+			margin-left: 0;
+			margin-right: 20px;
+			&:before {
+				left: auto;
+				transform: scale(-1, 1);
+				right: -10px;
+				border-right: 25px solid $gray_D;
+			}
+		}
+		/* .user-img {
+			.user-status {
+				display: none;
+			}
+		} */
+	}
+
+	& + .message {
+		margin-top: 20px;
+	}
+}

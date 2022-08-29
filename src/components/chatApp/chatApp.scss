@@ -1,0 +1,124 @@
+@import '../../varible.scss';
+
+.user-chats {
+	width: 30%;
+	.main-group {
+		min-height: 150px;
+		height: 150px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		position: relative;
+		padding: 0 20px;
+		background: $gray_L;
+	}
+	.main-chats {
+		background: $white;
+		height: 100%;
+		position: relative;
+		border-top: 1px solid $gray_D;
+		.chats-title {
+			padding: 0 20px;
+			display: flex;
+			align-items: center;
+			min-height: 70px;
+			height: 70px;
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: 600;
+			color: $blue_L;
+		}
+	}
+}
+.user-communication {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	border-left: 1px solid $gray_D;
+}
+
+@media only screen and (max-width: 1300px) {
+	.user-chats {
+		width: 40%;
+	}
+	.user-communication {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.user-chats {
+		width: 100%;
+		.user-chat {
+			.user-chat-info {
+				.user-dateMsg {
+					display: block;
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	.user-communication {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: -200vw;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.3s ease-in-out;
+		&.active-chat {
+			visibility: visible;
+			opacity: 1;
+			left: 0;
+		}
+		.message {
+			width: 100%;
+			&.own-msg {
+			}
+			.msg-text {
+				font-size: 14px;
+			}
+			.msg-date {
+				font-size: 12px;
+			}
+		}
+		.messages-content {
+			height: calc(100vh - 100px - 140px);
+		}
+		.recipient-block {
+			.prev-chat {
+				display: inline-block;
+				background: none;
+				border: none;
+				transform: scale(-1, -1);
+				margin-left: auto;
+				svg {
+					width: 45px;
+				}
+				&:active,
+				&:focus {
+					outline: 0;
+					outline-offset: 0;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+@media (orientation: landscape) and (max-width: 767px) {
+	.user-chats {
+		width: 100%;
+		.user-chat {
+			.user-chat-info {
+				.user-dateMsg {
+					display: inline-block;
+					width: auto;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

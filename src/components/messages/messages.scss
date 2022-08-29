@@ -1,0 +1,12 @@
+@import '../../varible.scss';
+
+.messages-content {
+	height: calc(100vh - 100px - 100px);
+	padding: 20px;
+	background: $gray_L;
+	border-top: 1px solid $gray_D;
+	border-bottom: 1px solid $gray_D;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+}

@@ -1,0 +1,6 @@
+@import '../../varible.scss';
+.chats-group {
+	overflow-y: auto;
+	border-top: 1px solid $gray_D;
+	height: calc(100vh - 70px - 150px);
+}

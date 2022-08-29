@@ -1,0 +1,28 @@
+@import '../../varible.scss';
+.user-img {
+	position: relative;
+	min-width: 60px;
+	min-height: 60px;
+	width: 60px;
+	height: 60px;
+	.user-avatar {
+		height: 100%;
+		width: 100%;
+		border-radius: 60px;
+		object-fit: cover;
+		object-position: top;
+	}
+	.user-status {
+		position: absolute;
+		bottom: 2px;
+		right: 2px;
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 12px;
+		background: #910000;
+		&.online {
+			background: $green;
+		}
+	}
+}

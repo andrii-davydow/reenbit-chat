@@ -1,0 +1,59 @@
+@import '../../varible.scss';
+.search-form {
+	display: flex;
+	width: 100%;
+	position: relative;
+	//margin-top: auto;
+	background: $gray_L;
+	.search-inp {
+		width: 100%;
+		padding: 13px 47px 13px 20px;
+		border-radius: 50px;
+		font-size: 15px;
+		border: 1px solid $gray_D;
+		color: $blue_D;
+		transition: 0.3s ease-in-out;
+
+		&:focus,
+		&:active {
+			outline: 0;
+			outline-offset: 0;
+			border-color: $blue_L;
+		}
+	}
+	.search-btn {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		min-width: 35px;
+		width: 35px;
+		min-height: 35px;
+		height: 35px;
+		border: 0;
+		border-radius: 35px;
+
+		background: $blue_D;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+		svg {
+			width: 20px;
+			position: relative;
+			top: 2px;
+			left: -1px;
+			path {
+				fill: $white;
+			}
+		}
+		&:hover {
+			background: $blue_L;
+		}
+	}
+}
+
+.search-result {
+	position: absolute;
+	top: 151px;
+	left: 0;
+	z-index: 2;
+	background: $white;
+}
